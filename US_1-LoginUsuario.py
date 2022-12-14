@@ -19,25 +19,25 @@ class LoginUsuario(unittest.TestCase):
         self.driver.maximize_window()
         self.driver.implicitly_wait(time_to_wait=10)
 
-    def test_login_page_correct(self):
-        usuario = self.driver.find_element(By.ID, 'txtUsername').send_keys("Admin ")
+    def lucia_test_login_page_correct(self):
+        usuario = self.driver.find_element(By.ID, 'txtUsername').send_keys("Admin")
         password = self.driver.find_element(By.ID, 'txtPassword').send_keys("admin123")
         login = self.driver.find_element(By.ID, "btnLogin").click()
 
         welcome = self.driver.find_element(By.ID, 'welcome').click()
 
-        print("Prueba Correcta - US 1 |  TC01 | Validar Login Usuario Correcto")
+        print("Prueba Correcta - US 1 |  TC01 | Validar Usuario Correcto")
 
 
 
-    def test_login_page_incorrect(self):
+    def lucia_test_login_page_incorrect(self):
         usuario = self.driver.find_element(By.ID, 'txtUsername').send_keys("Admin")
         password = self.driver.find_element(By.ID, 'txtPassword').send_keys("admin12345")
         login = self.driver.find_element(By.ID, "btnLogin").click()
         #welcome = self.driver.find_element(By.ID, 'welcome').click()
         msj = self.driver.find_element(By.XPATH, "//span[@id='spanMessage']")
         self.assertTrue(msj)
-        print("Prueba Correcta - US 1 | TC02 | Validar Login Usuario Incorrecto")
+        print("Prueba Correcta - US 1 | TC02 | Validar Usuario Incorrecto")
 
 
 
@@ -45,11 +45,9 @@ class LoginUsuario(unittest.TestCase):
         self.driver.quit()
 
 
-
-
 if __name__ == '__main__':
-    print("prueba exitosa")
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='C:\\Users\\Lucia Laptop\\Desktop\Python\\tarea4-pruebas\\Reportes'))
+    print("Prueba exitosa")
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='C:\\Users\\Lucia Laptop\\Desktop\Python\\tarea-final\\Reportes'))
 
 
 

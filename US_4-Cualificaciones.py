@@ -18,7 +18,7 @@ class Cualificaciones(unittest.TestCase):
         self.driver.maximize_window()
         self.driver.implicitly_wait(time_to_wait=10)
 
-    def test_admin_skill(self):
+    def lucia_test_admin_skill(self):
         usuario = self.driver.find_element(By.ID, 'txtUsername').send_keys("Admin ")
         password = self.driver.find_element(By.ID, 'txtPassword').send_keys("admin123")
         login = self.driver.find_element(By.ID, "btnLogin").click()
@@ -56,7 +56,7 @@ class Cualificaciones(unittest.TestCase):
 
         print("Prueba Correcta - US 4 | TC01 - Crear, Editar y Borrar Skill")
 
-    def test_admin_education(self):
+    def lucia_test_admin_education(self):
         usuario = self.driver.find_element(By.ID, 'txtUsername').send_keys("Admin ")
         password = self.driver.find_element(By.ID, 'txtPassword').send_keys("admin123")
         login = self.driver.find_element(By.ID, "btnLogin").click()
@@ -92,7 +92,7 @@ class Cualificaciones(unittest.TestCase):
 
         print("Prueba Correcta - US 4 | TC02 - Crear, Editar y Borrar Education")
 
-    def test_admin_licenses(self):
+    def lucia_test_admin_licenses(self):
         usuario = self.driver.find_element(By.ID, 'txtUsername').send_keys("Admin ")
         password = self.driver.find_element(By.ID, 'txtPassword').send_keys("admin123")
         login = self.driver.find_element(By.ID, "btnLogin").click()
@@ -129,7 +129,7 @@ class Cualificaciones(unittest.TestCase):
         print("Prueba Correcta - US 4 | TC03 - Crear, Editar y Borrar License")
 
 
-    def test_admin_languages(self):
+    def lucia_test_admin_languages(self):
         usuario = self.driver.find_element(By.ID, 'txtUsername').send_keys("Admin ")
         password = self.driver.find_element(By.ID, 'txtPassword').send_keys("admin123")
         login = self.driver.find_element(By.ID, "btnLogin").click()
@@ -167,7 +167,7 @@ class Cualificaciones(unittest.TestCase):
         print("Prueba Correcta - US 4 | TC04 - Crear, Editar y Borrar Language")
 
 
-    def test_admin_membership(self):
+    def lucia_test_admin_membership(self):
         usuario = self.driver.find_element(By.ID, 'txtUsername').send_keys("Admin ")
         password = self.driver.find_element(By.ID, 'txtPassword').send_keys("admin123")
         login = self.driver.find_element(By.ID, "btnLogin").click()
@@ -213,8 +213,8 @@ class Cualificaciones(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    print("prueba exitosa")
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='C:\\Users\\Lucia Laptop\\Desktop\Python\\tarea4-pruebas\\Reportes'))
+    print("Prueba exitosa")
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='C:\\Users\\Lucia Laptop\\Desktop\Python\\tarea4-final\\Reportes'))
 
 
 

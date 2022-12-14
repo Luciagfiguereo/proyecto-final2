@@ -20,7 +20,7 @@ class AdministradorUsuarios(unittest.TestCase):
         self.driver.maximize_window()
         self.driver.implicitly_wait(time_to_wait=10)
 
-    def test_creacion_usuario(self):
+    def lucia_test_creacion_usuario(self):
         usuario = self.driver.find_element(By.ID, 'txtUsername').send_keys("Admin ")
         password = self.driver.find_element(By.ID, 'txtPassword').send_keys("admin123")
         login = self.driver.find_element(By.ID, "btnLogin").click()
@@ -46,7 +46,7 @@ class AdministradorUsuarios(unittest.TestCase):
 
 
 
-    def test_buscar_usuario(self):
+    def lucia_test_buscar_usuario(self):
         usuario = self.driver.find_element(By.ID, 'txtUsername').send_keys("Admin")
         password = self.driver.find_element(By.ID, 'txtPassword').send_keys("admin123")
         login = self.driver.find_element(By.ID, "btnLogin").click()
@@ -57,7 +57,7 @@ class AdministradorUsuarios(unittest.TestCase):
 
         print("US 3 | TC02 - Validar Buscar Usuario")
 
-    def test_editar_usuario(self):
+    def lucia_test_editar_usuario(self):
         usuario = self.driver.find_element(By.ID, 'txtUsername').send_keys("Admin")
         password = self.driver.find_element(By.ID, 'txtPassword').send_keys("admin123")
         login = self.driver.find_element(By.ID, "btnLogin").click()
@@ -81,7 +81,7 @@ class AdministradorUsuarios(unittest.TestCase):
 
         print("US 3 | TC03 - Validar Editar Nuevo Usuario")
 
-    def test_borrar_usuario(self):
+    def lucia_test_borrar_usuario(self):
         usuario = self.driver.find_element(By.ID, 'txtUsername').send_keys("Admin")
         password = self.driver.find_element(By.ID, 'txtPassword').send_keys("admin123")
         login = self.driver.find_element(By.ID, "btnLogin").click()
@@ -107,8 +107,8 @@ class AdministradorUsuarios(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    print("prueba exitosa")
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='C:\\Users\\Lucia Laptop\\Desktop\Python\\tarea4-pruebas\\Reportes'))
+    print("Prueba exitosa")
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='C:\\Users\\Lucia Laptop\\Desktop\Python\\tarea4-final\\Reportes'))
 
 
 

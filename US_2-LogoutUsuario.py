@@ -16,7 +16,7 @@ class LogoutUsuario(unittest.TestCase):
         self.driver.maximize_window()
         self.driver.implicitly_wait(time_to_wait=10)
 
-    def test_logout_page(self):
+    def lucia_test_logout_page(self):
         usuario = self.driver.find_element(By.ID, 'txtUsername').send_keys("Admin ")
         password = self.driver.find_element(By.ID, 'txtPassword').send_keys("admin123")
         login = self.driver.find_element(By.ID, "btnLogin").click()
@@ -25,7 +25,7 @@ class LogoutUsuario(unittest.TestCase):
             welcome.click()
             buscando = self.driver.find_element(By.XPATH,  "//a[contains(text(),'Logout')]").click()
 
-        print("US 2 - TC01 - Validar Cierre de Sesion Usuario")
+        print("US 2 - TC01 - Validando Cierre de Sesion Usuario")
 
 
     def tearDown(self):
@@ -33,11 +33,9 @@ class LogoutUsuario(unittest.TestCase):
 
 
 
-
-
 if __name__ == '__main__':
-    print("prueba exitosa")
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='C:\\Users\\Lucia Laptop\\Desktop\Python\\tarea4-pruebas\\Reportes'))
+    print("Prueba exitosa")
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='C:\\Users\\Lucia Laptop\\Desktop\Python\\tarea4-final\\Reportes'))
 
 
 
